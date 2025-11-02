@@ -12,14 +12,17 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
-// Products route
-Route::middleware('auth')->name('admin.')->group(function () {
+// Admin Product Routes without prefix, protected by auth
+Route::middleware(['auth', 'verified'])->name('admin.')->group(function () {
     Route::resource('products', ProductController::class);
 });
 
 
-// Profile management routes
+// Frontend Product Routes single show
+Route::get('/features/{id}', [PageController::class, 'show'])->name('pages.features.show');
+
+
+// Profile management routes (authenticated users)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -29,19 +32,13 @@ Route::middleware('auth')->group(function () {
 // User management routes
 Route::resource('users', UserController::class);
 
+// Medicine routes (currently commented out)
+// Route::get('/medicines', [MedicineController::class, 'index']);
 
-// Medicine routes
-//Route::get('/medicines', [MedicineController::class, 'index']);
-
-
-// Home (Page routes)
-Route::get('/', [PageController::class, 'index'])->name(name: 'pages.home.index');
-// All Pages routes
+// Static Pages Routes
+Route::get('/', [PageController::class, 'index'])->name('pages.home.index');
 Route::get('/features', [PageController::class, 'features'])->name('pages.features.index');
 Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
 Route::get('/docs', [PageController::class, 'docs'])->name('docs');
-
-
-
 
 require __DIR__.'/auth.php';

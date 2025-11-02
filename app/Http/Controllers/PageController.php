@@ -2,34 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    
     /**
-     * home page view 
-     * @return \Illuminate\View\View
+     * Home page view.
      */
     public function index()
     {
         return view('pages.home.index');
     }
-    
+
     /**
-     * Show the Features page.
-     *
-     * @return \Illuminate\View\View
+     * Show the Features page (with product list).
      */
     public function features()
     {
-        return view('pages.features.index');
+        $products = Product::latest()->get();
+        return view('pages.features.index', compact('products'));
     }
 
     /**
      * Show the Pricing page.
-     *
-     * @return \Illuminate\View\View
      */
     public function pricing()
     {
@@ -38,11 +34,18 @@ class PageController extends Controller
 
     /**
      * Show the Docs page.
-     *
-     * @return \Illuminate\View\View
      */
     public function docs()
     {
         return view('pages.docs');
+    }
+
+    /**
+     * Show a single product details page.
+     */
+    public function show($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('pages.features.show', compact(var_name: 'product'));
     }
 }

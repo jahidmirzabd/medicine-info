@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::latest()->get();
+        $products = Product::latest()->paginate(10); // paginate for admin
         return view('admin.products.index', compact('products'));
     }
 
@@ -57,4 +57,6 @@ class ProductController extends Controller
 
         return redirect()->route('admin.products.index')->with('success', 'Product updated successfully!');
     }
+
+    
 }
