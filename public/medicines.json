@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Paracetamol",
+        "brand": "Acme Pharma",
+        "price": 5.0,
+        "description": "Used for fever and pain relief"
+    },
+    {
+        "id": 2,
+        "name": "Amoxicillin",
+        "brand": "Beta Pharma",
+        "price": 10.0,
+        "description": "Antibiotic for bacterial infections"
+    },
+    {
+        "id": 3,
+        "name": "Ibuprofen",
+        "brand": "Delta Meds",
+        "price": 6.5,
+        "description": "Anti-inflammatory pain reliever"
+    },
+    {
+        "id": 4,
+        "name": "Omeprazole",
+        "brand": "Gamma Health",
+        "price": 15.0,
+        "description": "For acid reflux and heartburn"
+    },
+    {
+        "id": 5,
+        "name": "Cetirizine",
+        "brand": "Omega Pharma",
+        "price": 8.0,
+        "description": "Antihistamine for allergies"
+    },
+    {
+        "id": 6,
+        "name": "Metformin",
+        "brand": "Sigma Labs",
+        "price": 12.0,
+        "description": "For type 2 diabetes"
+    },
+    {
+        "id": 7,
+        "name": "Aspirin",
+        "brand": "Alpha Meds",
+        "price": 4.5,
+        "description": "Blood thinner and pain reliever"
+    },
+    {
+        "id": 8,
+        "name": "Loratadine",
+        "brand": "Zeta Health",
+        "price": 7.5,
+        "description": "Non-drowsy allergy relief"
+    },
+    {
+        "id": 9,
+        "name": "Simvastatin",
+        "brand": "Theta Pharma",
+        "price": 18.0,
+        "description": "Cholesterol-lowering medication"
+    },
+    {
+        "id": 10,
+        "name": "Lisinopril",
+        "brand": "Kappa Labs",
+        "price": 14.0,
+        "description": "For high blood pressure"
+    }
+]
