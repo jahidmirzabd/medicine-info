@@ -38,7 +38,7 @@ Route::resource('users', UserController::class);
 // Static Pages Routes
 Route::get('/', [PageController::class, 'index'])->name('pages.home.index');
 Route::get('/features', [PageController::class, 'features'])->name('pages.features.index');
-Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
+Route::get('/pricing', [PageController::class, 'pricing'])->name('pages.pricing.price');
 Route::get('/docs', [PageController::class, 'docs'])->name('docs');
 
 require __DIR__.'/auth.php';

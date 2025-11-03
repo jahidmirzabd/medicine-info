@@ -11,7 +11,7 @@
         <nav class="hidden md:flex space-x-8 text-white">
             <a href="{{ route('pages.home.index') }}" class="hover:text-cyan-300 transition duration-200">Home</a>
             <a href="{{ route('pages.features.index') }}" class="hover:text-cyan-300 transition duration-200">Features</a>
-            <a href="#" class="hover:text-cyan-300 transition duration-200">Pricing</a>
+            <a href="{{ route('pages.pricing.price') }}" class="hover:text-cyan-300 transition duration-200">Pricing</a>
             <a href="#" class="hover:text-cyan-300 transition duration-200">Docs</a>
         </nav>
 
