@@ -8,9 +8,8 @@
     <section class="relative h-[500px] overflow-hidden bg-gray-900">
         {{-- Background Image (1280px width, 500px height - adjusted for full-width responsiveness) --}}
         <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}"
-            class="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105 opacity-70"
-            style="min-width: 1280px;"> {{-- The min-width helps ensure it covers large screens, but full-width classes handle responsiveness --}}
-
+            class="w-full h-full object-cover transition-all duration-700 ease-in-out hover:scale-105 opacity-70">
+            
         {{-- Dark Overlay for contrast --}}
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/50 via-gray-900/30 to-transparent"></div>
 
