@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FormsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MedicineController;
-use App\Http\Controllers\ProductController;
 
 // Dashboard route
 Route::get('/dashboard', function () {
@@ -40,5 +41,18 @@ Route::get('/', [PageController::class, 'index'])->name('pages.home.index');
 Route::get('/features', [PageController::class, 'features'])->name('pages.features.index');
 Route::get('/pricing', [PageController::class, 'pricing'])->name('pages.pricing.price');
 Route::get('/docs', [PageController::class, 'docs'])->name('docs');
+
+
+
+
+
+
+// Buy Now POST route to handle form submissions
+Route::post('/buynow', [FormsController::class, 'process'])->name('forms.buynow');
+
+
+
+
+
 
 require __DIR__.'/auth.php';

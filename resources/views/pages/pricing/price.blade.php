@@ -23,7 +23,7 @@
             <li>✓ 5GB Storage</li>
           </ul>
 
-          <form action="#" method="POST" class="mt-8">
+          <form action="{{ route('forms.buynow') }}" method="POST" class="mt-8">
             @csrf
             <input type="hidden" name="plan" value="basic">
             <button class="w-full py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition font-semibold">
@@ -49,7 +49,7 @@
             <li>✓ 50GB Storage</li>
           </ul>
 
-          <form action="#" method="POST" class="mt-8">
+          <form action="{{ route('forms.buynow') }}" method="POST" class="mt-8">
             @csrf
             <input type="hidden" name="plan" value="pro">
             <button class="w-full py-3 rounded-xl bg-pink-500 text-white hover:bg-pink-600 transition font-semibold">
@@ -75,7 +75,7 @@
             <li>✓ 200GB Storage</li>
           </ul>
 
-          <form action="#" method="POST" class="mt-8">
+          <form action="{{ route('forms.buynow') }}" method="POST" class="mt-8">
             @csrf
             <input type="hidden" name="plan" value="enterprise">
             <button class="w-full py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition font-semibold">

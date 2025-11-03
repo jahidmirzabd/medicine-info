@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
+            $table->string('plan_id')->unique(); // basic, pro, enterprise
+            $table->string('name');
+            $table->string('price');
+            $table->string('description')->nullable();
+            $table->json('features')->nullable();
             $table->timestamps();
         });
     }
