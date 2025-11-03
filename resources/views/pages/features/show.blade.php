@@ -30,7 +30,7 @@
        <!-- Description -->
         <div class="text-left">
             <h2 class="text-3xl font-bold text-pink-500 mb-6">Product Details</h2>
-            <p class="text-gray-300 text-xl leading-relaxed font-light">
+            <p class="text-white text-xl leading-relaxed font-light">
                 {!! $product->description !!}
             </p>
         </div>
